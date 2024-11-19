@@ -2,16 +2,16 @@
 
 namespace BenBjurstrom\Replicate\Requests;
 
-use BenBjurstrom\Replicate\Data\PredictionData;
+use BenBjurstrom\Replicate\Traits\HasPredictionData;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Http\Response;
 use Saloon\Traits\Body\HasJsonBody;
 
 class PostPrediction extends Request implements HasBody
 {
     use HasJsonBody;
+    use HasPredictionData;
 
     protected Method $method = Method::POST;
 
@@ -38,10 +38,5 @@ class PostPrediction extends Request implements HasBody
             'version' => $this->version,
             'input' => $this->input,
         ];
-    }
-
-    public function createDtoFromResponse(Response $response): PredictionData
-    {
-        return PredictionData::fromResponse($response);
     }
 }
