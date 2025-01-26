@@ -1,8 +1,8 @@
 <?php
 
-use BenBjurstrom\Replicate\Requests\GetPrediction;
-use BenBjurstrom\Replicate\Requests\GetPredictions;
-use BenBjurstrom\Replicate\Requests\PostPrediction;
+use D4veR\Replicate\Requests\GetPrediction;
+use D4veR\Replicate\Requests\GetPredictions;
+use D4veR\Replicate\Requests\PostPrediction;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 

@@ -1,14 +1,16 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Requests;
+namespace D4veR\Replicate\Requests;
 
-use BenBjurstrom\Replicate\Data\PredictionData;
+use D4veR\Replicate\Traits\HasPredictionData;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Http\Response;
 
 class GetPrediction extends Request
 {
+
+    use HasPredictionData;
+
     protected Method $method = Method::GET;
 
     public function __construct(
@@ -19,10 +21,5 @@ class GetPrediction extends Request
     public function resolveEndpoint(): string
     {
         return sprintf('/predictions/%s', $this->id);
-    }
-
-    public function createDtoFromResponse(Response $response): PredictionData
-    {
-        return PredictionData::fromResponse($response);
     }
 }

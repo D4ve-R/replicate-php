@@ -1,17 +1,17 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Requests;
+namespace D4veR\Replicate\Requests;
 
-use BenBjurstrom\Replicate\Data\PredictionData;
+use D4veR\Replicate\Traits\HasPredictionData;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
-use Saloon\Http\Response;
 use Saloon\Traits\Body\HasJsonBody;
 
 class PostPredictionCancel extends Request implements HasBody
 {
     use HasJsonBody;
+    use HasPredictionData;
 
     protected Method $method = Method::POST;
 
@@ -22,12 +22,6 @@ class PostPredictionCancel extends Request implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return sprintf('/predictions/%s/cancel
-', $this->id);
-    }
-
-    public function createDtoFromResponse(Response $response): PredictionData
-    {
-        return PredictionData::fromResponse($response);
+        return sprintf('/predictions/%s/cancel', $this->id);
     }
 }

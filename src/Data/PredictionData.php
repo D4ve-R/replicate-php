@@ -1,9 +1,7 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Data;
+namespace D4veR\Replicate\Data;
 
-use Exception;
-use Saloon\Http\Response;
 
 final class PredictionData
 {
@@ -28,28 +26,5 @@ final class PredictionData
         public array|string|null $error,
         public string|array|null $output,
     ) {
-    }
-
-    public static function fromResponse(Response $response): self
-    {
-        $data = $response->json();
-        if (! is_array($data)) {
-            throw new Exception('Invalid response');
-        }
-
-        return new self(
-            id: $data['id'],
-            version: $data['version'],
-            createdAt: $data['created_at'],
-            completedAt: $data['completed_at'] ?? null,
-            startedAt: $data['started_at'] ?? null,
-            status: $data['status'],
-            webhookCompleted: $data['webhook_completed'] ?? null,
-            input: $data['input'],
-            metrics: $data['metrics'] ?? null,
-            urls: $data['urls'],
-            error: $data['error'] ?? null,
-            output: $data['output'] ?? null,
-        );
     }
 }

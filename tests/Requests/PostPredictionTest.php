@@ -1,7 +1,7 @@
 <?php
 
-use BenBjurstrom\Replicate\Data\PredictionData;
-use BenBjurstrom\Replicate\Requests\PostPrediction;
+use D4veR\Replicate\Data\PredictionData;
+use D4veR\Replicate\Requests\PostPrediction;
 
 test('post prediction endpoint hello', function () {
     $connector = getMockConnector(
