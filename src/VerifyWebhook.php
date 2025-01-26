@@ -1,5 +1,7 @@
 <?php
 
+namespace BenBjurstrom\Replicate;
+
 use Psr\Http\Message\RequestInterface;
 
 final class VerifyWebhook 
