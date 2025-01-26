@@ -1,12 +1,12 @@
 {
-    "name": "benbjurstrom/replicate-php",
+    "name": "d4ve-r/replicate-php",
     "description": "A PHP client for the Replicate API",
     "keywords": ["replicate", "php", "package"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Ben Bjurstrom",
-            "email": "bbjurstrom@gmail.com"
+            "name": "David Rechkemmer",
+            "email": "david.rechkemmer@gmail.com"
         }
     ],
     "require": {
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BenBjurstrom\\Replicate\\": "src/"
+            "D4veR\\Replicate\\": "src/"
         }
     },
     "autoload-dev": {

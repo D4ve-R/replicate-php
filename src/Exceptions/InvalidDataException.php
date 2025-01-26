@@ -1,6 +1,6 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Exceptions;
+namespace D4veR\Replicate\Exceptions;
 
 class InvalidDataException extends \Exception
 {

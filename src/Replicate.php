@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace BenBjurstrom\Replicate;
+namespace D4veR\Replicate;
 
 use Saloon\Http\Connector;
 use Saloon\Http\Auth\TokenAuthenticator;

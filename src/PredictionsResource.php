@@ -1,13 +1,13 @@
 <?php
 
-namespace BenBjurstrom\Replicate;
+namespace D4veR\Replicate;
 
-use BenBjurstrom\Replicate\Data\PredictionData;
-use BenBjurstrom\Replicate\Data\PredictionsData;
-use BenBjurstrom\Replicate\Exceptions\TypeException;
-use BenBjurstrom\Replicate\Requests\GetPrediction;
-use BenBjurstrom\Replicate\Requests\GetPredictions;
-use BenBjurstrom\Replicate\Requests\PostPrediction;
+use D4veR\Replicate\Data\PredictionData;
+use D4veR\Replicate\Data\PredictionsData;
+use D4veR\Replicate\Exceptions\TypeException;
+use D4veR\Replicate\Requests\GetPrediction;
+use D4veR\Replicate\Requests\GetPredictions;
+use D4veR\Replicate\Requests\PostPrediction;
 
 class PredictionsResource extends Resource
 {

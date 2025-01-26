@@ -1,9 +1,9 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Traits;
+namespace D4veR\Replicate\Traits;
 
-use BenBjurstrom\Replicate\Data\PredictionData;
-use BenBjurstrom\Replicate\Exceptions\InvalidDataException;
+use D4veR\Replicate\Data\PredictionData;
+use D4veR\Replicate\Exceptions\InvalidDataException;
 use Saloon\Http\Response;
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Data;
+namespace D4veR\Replicate\Data;
 
 use Saloon\Http\Response;
 

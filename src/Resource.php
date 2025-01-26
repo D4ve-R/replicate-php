@@ -1,6 +1,6 @@
 <?php
 
-namespace BenBjurstrom\Replicate;
+namespace D4veR\Replicate;
 
 use Saloon\Http\Connector;
 

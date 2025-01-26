@@ -1,8 +1,8 @@
 <?php
 
-namespace BenBjurstrom\Replicate\Requests;
+namespace D4veR\Replicate\Requests;
 
-use BenBjurstrom\Replicate\Traits\HasPredictionData;
+use D4veR\Replicate\Traits\HasPredictionData;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 
