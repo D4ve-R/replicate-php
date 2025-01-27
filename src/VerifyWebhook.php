@@ -14,7 +14,7 @@ final class VerifyWebhook
         $id = $request->getHeaderLine('webhook-id');
         $timestamp = $request->getHeaderLine('webhook-timestamp');
         $body = $request->getBody()->getContents();
-        $payload = $id . $timestamp . $body;
+        $payload = $id . '.' . $timestamp . '.' . $body;
         $expected = hash_hmac('sha256', $payload, explode('_', $secret)[1]);
 
         // list of (version,signature), separated by a space
