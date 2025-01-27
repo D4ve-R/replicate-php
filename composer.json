@@ -55,5 +55,12 @@
     "suggest": {
         "illuminate/support": "To use in Laravel applications",
         "illuminate/console": "To use in Laravel applications"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "D4veR\\Replicate\\Providers\\ReplicateServiceProvider"
+            ]
+        }
     }
 }

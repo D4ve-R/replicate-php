@@ -52,4 +52,9 @@ class Replicate extends Connector
     {
         return new PredictionsResource($this);
     }
+
+    public function webhooks(): WebhooksResource
+    {
+        return new WebhooksResource($this);
+    }
 }

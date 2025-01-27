@@ -119,6 +119,26 @@ $api->predictions()->withWebhook('https://www.example.com/webhook')->create($ver
 $data->id; // la5xlbbrfzg57ip5jlx6obmm5y
 ```
 
+
+### Verify Webhooks
+You can verify request to your webhook route. Here's an example using Laravel:
+
+```php
+use D4veR\Replicate\VerifyWebhook;
+
+Route::get('/webhook', function (Request $request) {
+    // ...
+    $isValid = Replicate::webhooks()->verify($request, 'YOUR_WEBHOOK_SECRET');
+    // ...
+});
+```
+
+You can get you webhook secret, to verify the request.
+
+```php
+$secret = $api->webhooks()->secret();
+```
+
 ## Available Prediction Methods
 ### get()
 Use to get details about an existing prediction. If the prediction has completed the results will be under the output property.
