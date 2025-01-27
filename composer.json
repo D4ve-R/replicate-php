@@ -14,6 +14,8 @@
         "saloonphp/saloon": "^3.0"
     },
     "require-dev": {
+        "illuminate/console": "^11.40",
+        "illuminate/support": "^11.40",
         "laravel/pint": "^1.4",
         "pestphp/pest": "^2.0.0",
         "pestphp/pest-plugin-arch": "2.5.0",
@@ -49,5 +51,9 @@
             "@test:types",
             "@test:unit"
         ]
+    },
+    "suggest": {
+        "illuminate/support": "To use in Laravel applications",
+        "illuminate/console": "To use in Laravel applications"
     }
 }
