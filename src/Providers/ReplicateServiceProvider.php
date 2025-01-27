@@ -1,7 +1,4 @@
 <?php
-/**
- * @author Aaron Francis <aaron@hammerstone.dev>
- */
 
 namespace D4veR\Replicate\Providers;
 

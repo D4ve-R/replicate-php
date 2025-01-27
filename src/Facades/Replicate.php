@@ -1,7 +1,4 @@
 <?php
-/**
- * @author Aaron Francis <aaron@hammerstone.dev|https://twitter.com/aarondfrancis>
- */
 
 namespace D4veR\Replicate\Facades;
 
