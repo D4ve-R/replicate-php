@@ -16,15 +16,13 @@ class Replicate extends Connector
     use AlwaysThrowOnErrors;
     use HasTimeout;
 
-    public PredictionsResource $predictions;
-
     public function __construct(
         protected readonly string $apiToken,
         protected readonly string $baseUrl = 'https://api.replicate.com/v1',
         protected int $requestTimeout = 60,
     ) 
     {
-        $this->predictions = new PredictionsResource($this);
+        //
     }
 
     public function resolveBaseUrl(): string
@@ -48,5 +46,10 @@ class Replicate extends Connector
     protected function defaultAuth(): TokenAuthenticator
     {
         return new TokenAuthenticator($this->apiToken);
+    }
+
+    public function predictions(): PredictionsResource
+    {
+        return new PredictionsResource($this);
     }
 }
