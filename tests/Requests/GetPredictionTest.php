@@ -5,10 +5,6 @@ use D4veR\Replicate\Requests\GetPrediction;
 use Saloon\Http\Faking\MockClient;
 use Saloon\Http\Faking\MockResponse;
 
-beforeEach(function () {
-    echo 'beforeEach';
-});
-
 test('get prediction endpoint', function () {
     $mockClient = new MockClient([
         GetPrediction::class => MockResponse::fixture('getPrediction'),
